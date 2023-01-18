@@ -1,0 +1,117 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roberto&display=swap');  */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:'Roberto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;   
+    margin: 0;
+    text-align: center;
+    margin-bottom: 5rem;
+    transition: 0.5s;
+}
+.toggleTheme{
+    color: white;
+    background-color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: 0;
+    cursor: pointer;
+    margin:2rem 0 5rem ;
+}
+.clock-wrapper{
+    flex-shrink: 0;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color:rgb(185, 182, 182);
+    border: 5px solid rgb(6, 6, 6);
+    margin: 20px;
+
+}
+.clock-part{
+    height: 45px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: rgb(16, 16, 16);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+}
+.minutes{
+    height:62px;
+}
+.seconds{
+    transform: rotate(130deg);
+    height: 80px;
+    background-color: orangered;
+    z-index: 10;
+}
+.circle{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(253, 253, 253);
+    border-radius: 50%;
+    border: 2px solid orangered;
+    z-index: 999;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-3px, 5px);
+    
+
+}
+h1{
+    margin-bottom:0;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+#date{
+    font-size: 0.7rem;
+    color: #aaa;
+    text-transform: uppercase;
+    display: flex;
+    padding: 10px;
+    /* align-items: center;
+    justify-content: space-between;
+    min-width: 100px; */
+}
+.days{
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+    padding:5px;
+    font-size: 0.5rem;
+    color: white;
+    margin-top: -5px;
+    margin-inline: 5px;
+  
+    
+}
+body.dark{
+    background-color: black;
+    color: white;
+}
+
+ body.dark .days, 
+ body.dark .toggleTheme
+{
+    background-color: white;
+    color: black;
+}
+body.dark .clock-wrapper{
+    border-color: white;
+}
+
+body.dark .circle,
+body.dark .minutes, 
+body.dark .hours{
+    background-color: black;
+}
